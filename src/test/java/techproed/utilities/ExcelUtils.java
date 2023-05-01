@@ -28,7 +28,7 @@ public class ExcelUtils {
         }
     }
 
-    //Satir ve sutun sayilari girildiginde o hucredeki veriyi return eder.
+    //getCellData : Satir ve sutun sayilari girildiginde o hucredeki veriyi return eder.
     public String getCellData(int rowNum,int colNum){
         Cell cell = sheet.getRow(rowNum).getCell(colNum);
         return cell.toString();
@@ -40,5 +40,21 @@ public class ExcelUtils {
     }//Exceldeki sutun sayisini return eder
     public  int columnCount(){
         return sheet.getRow(0).getLastCellNum();
+    }
+
+    //Exceldeki datalari alabilmek icin 2 boyutlu bir Array method olusturalim.
+
+    public String[][] getDataArray()  {
+        String[][] data = new String[rowCount()][columnCount()];
+        for (int i = 1; i <= rowCount(); i++) {
+            for (int j = 0; j < columnCount(); j++) {
+                String value = getCellData(i, j);
+                data[i - 1][j] = value;
+
+            }
+
+        }
+        return data;
+
     }
 }
