@@ -3,10 +3,7 @@ package techproed.tests.day26_ExcelDataProvider;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import techproed.pages.BlueRentalPage;
-import techproed.utilities.ConfigReader;
-import techproed.utilities.DataProviderUtils;
-import techproed.utilities.Driver;
-import techproed.utilities.ExcelUtils;
+import techproed.utilities.*;
 
 import java.util.Arrays;
 
@@ -25,6 +22,8 @@ public class C03_DataProviderExcel {
         BlueRentalPage blueRentalPage = new BlueRentalPage();
         blueRentalPage.login.click();
         blueRentalPage.email.sendKeys(email, Keys.TAB,pass,Keys.ENTER);
+        ReusableMethods.bekle(3);
+        Driver.closeDriver(); //Kapatmazsak calismiyor.
 
     }
     /*

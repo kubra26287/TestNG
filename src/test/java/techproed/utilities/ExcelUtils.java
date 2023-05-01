@@ -52,9 +52,9 @@ public class ExcelUtils {
                 data[i - 1][j] = value;
 
             }
-
+            ReusableMethods.bekle(6);
         }
-        return data;
 
+        return data;
     }
 }
