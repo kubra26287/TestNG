@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Day 24 Smoke Test">
+    <test name="Negative ve Pozitive Test">
+   <groups>
+       <run>
+           <include name="smoke"/>
+       </run>
+   </groups>
+        <classes>
+            <class name="techproed.tests.day24_Properties_Pages.SmokeTest.NegativeTestBlurental"/>
+            <class name="techproed.tests.day24_Properties_Pages.SmokeTest.PositiveTestBluRental"/>
+        </classes>
+        <!--
+       <packages>
+           <package name="techproed.*"/>
+       </packages>
+       boyle package ile de olabilir-->
+    </test>
+</suite>
+
+<!-- *Testlerimizde .xml file ile belirli gruplari calistirmak istersek @Test notasayonundan sonra  grup parametresi ile isim belirtmek gerekir
+    *<Test> tagindan sonra <grup> tag i kullanilir sonrasinda <run> ve <include> taglari kullanilir ve <group> taginin arkasinda hangi pakage yada hangi class oldugu belirtilir.
+    *group tagindaki package da 'techproed.*' bu package altindaki bütün(*) package lari conltrol eder.-->

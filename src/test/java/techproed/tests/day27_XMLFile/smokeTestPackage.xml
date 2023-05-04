@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BlueRentalCar Smoke Test">
+    <test verbose="2" preserve-order="true"
+          name="/Users/fatihyilmaz/IdeaProjects/B129SeleniumTestNG/src/test/java/techproed/tests/day24_Properties_Pages/SmokeTest">
+       <packages>
+           <package name="techproed.tests.day24_Properties_Pages.SmokeTest">
+
+           </package>
+       </packages>
+    </test>
+</suite>
+        <!--.xml file actiktan sonra ctrl+alt+L / command+option+l  tuslarina basarak .xml file'daki kodlari duzene koyariz -->
+        <!--.xml file da ilk tag <suite> sonra <test> olarak devam eder -->
+        <!-- xml file ile bu classta sadece pakage olarak test yapacagimiz icin <classes> tag'lerine gerek yoktur-->
+        <!-- sag tik yaptigimiz zaman run sekmesi gozukmuyorsa file->save-all yapmamiz gerekir -->
+
+        <!--
+         Testng.xml dosyasini indirmek icin plugins install ok.
+         Smoke test sag tikla createTesngXml tikla ok .
+         File reloadAll from disk tikla.Dosya projede olusur.
+         suite name= e isim verilir.
+         -->

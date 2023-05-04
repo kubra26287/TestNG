@@ -27,4 +27,12 @@ public class BlueRentalPage {
     @FindBy(xpath="//*[@class='ajs-button ajs-ok']")
     public WebElement ok;
 
+    /*Bu bir örnektir
+    @FindBy(xpath = "//*[text()='OK']")//-> Linklerin listesinin locati
+    public List<WebElement> listler;
+    Normalde Webelementleri locate için findelements kullanıyorduk
+    TestNG de page class'ında bunun kullanımı yukarıdaki örnekteki gibidir
+
+     */
+
 }

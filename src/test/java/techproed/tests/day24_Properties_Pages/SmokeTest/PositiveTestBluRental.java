@@ -15,7 +15,7 @@ public class PositiveTestBluRental {
         Admin email: jack@gmail.com
         Admin password: 12345
          */
-    @Test
+    @Test(groups = "smoke")
     public void test1() {
         Driver.getDriver().get(ConfigReader.getProperty("blueRentACArUrl"));
         BlueRentalPage blueRentalPage = new BlueRentalPage();

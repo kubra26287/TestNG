@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="classes" thread-count="2">
+    <test name="Day 23 Parallel Test">
+        <!-- .xml file ile paralel test yapmak icin projemizi oncelikle buna gore dizayn etmeliyiz.
+         Calisan Testler birbirinden bagimsiz olmalidir.Bagimliligi olan Testler Paralel calistrimada hata verebilir
+         Paralel Test yaabilmek icin oncelikle <suite> tagina paralel parametresi yazariz sonrasinda paralel parametresine
+          class,method,tests gibi atamalarla hangi seviyede test yapacagini belirleriz
+          classes-> Her bir islem icin bir class ile run eder.Calistigi classta islem bitince siradaki class a gecer.
+          methos-> Her bir islem icin bir method ile run eder.
+          test-> her bir islem icin bir test ile run eder.
+          .xml file ile Paralel Test yapmanin amaci; Testlerimizi daha kisa surede bitirebilmektir.
+          Bunu da fazladan Browser  acarak gerceklestirir
+          suite name= yanina (<suite name="All Test Suite" parallel="classes" thread-count="2") yazarak browser sayisini (thread-count="2") belirtiriz-->
+        <classes>
+            <class name="techproed.tests.day23_DependsOnMethod_SoftAssertion.C01_DependsOnMethods">
+                <methods>
+                    <include name="amazonTest"/>
+                    <include name="amazonTest2"/>
+                    <include name="amazonTest3"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethod_SoftAssertion.C02_DependsMethodPriority">
+                <methods>
+                    <include name="amazonTest"/>
+                    <include name="amazonTest2"/>
+                    <include name="amazonTest3"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethod_SoftAssertion.C03_SoftAssertion">
+                <methods>
+                    <include name="amazonTest"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethod_SoftAssertion.C04_DriverTest">
+                <methods>
+                    <include name="testName"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
