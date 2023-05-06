@@ -1,10 +1,11 @@
 package techproed.utilities;
 
+import org.testng.IRetryAnalyzer;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listeners implements ITestListener {
+public class Listeners implements ITestListener , IRetryAnalyzer {
     /*
     ilk once classi implements ederiz ITEstListener a
     Listeners: TestNG de bir testin durumunu ve sonucunu izleyen ve bu duruma yanit veren bir yapidir.
@@ -47,4 +48,16 @@ public class Listeners implements ITestListener {
         System.out.println("onTestSkipped Methodu -> skipp(atlanan) olan  testten sonra tek bir kere cagrilir"+result.getName());
 
     }
+
+    private int retryCount = 0;
+    private static final int maxRetryCount = 2;
+    @Override
+    public boolean retry(ITestResult result) {
+        if (retryCount < maxRetryCount) {
+            retryCount++;
+            return true;
+        }
+        return false;
+    }
+
 }
